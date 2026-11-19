@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Data (re-created by scripts/download_data.py + scripts/preprocess.py)
+data/raw/
+data/processed/
+data/app/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Environment / editors
+.env
+.DS_Store
+.idea/
+.vscode/
+*.log

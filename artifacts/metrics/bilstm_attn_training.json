@@ -1,0 +1,677 @@
+{
+  "model": "bilstm_attn",
+  "config": {
+    "arch": "bilstm_attn",
+    "max_epochs": 30,
+    "patience": 4,
+    "batch_size": 32,
+    "window": 256,
+    "neg_keep": 0.25,
+    "lr": 0.0015,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "max_gap": 3,
+    "seed": 13,
+    "time_budget_min": 95.0,
+    "threads": 0,
+    "word_dim": 128,
+    "hidden": 160,
+    "cnn_dim": 192,
+    "dropout": 0.3,
+    "pos_weight_cap": 10.0,
+    "limit_docs": 0
+  },
+  "n_parameters": 3963081,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.20281,
+      "train_windows": 7286,
+      "val_span_f1": 0.0354,
+      "val_span_macro_f1": 0.0113,
+      "val_char_iou": 0.08,
+      "val_threshold": 0.5,
+      "lr": 0.0015,
+      "epoch_seconds": 241.8,
+      "train_seconds": 215.1
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.14085,
+      "train_windows": 7337,
+      "val_span_f1": 0.1068,
+      "val_span_macro_f1": 0.0591,
+      "val_char_iou": 0.1592,
+      "val_threshold": 0.7,
+      "lr": 0.0015,
+      "epoch_seconds": 221.9,
+      "train_seconds": 196.4
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.10952,
+      "train_windows": 7308,
+      "val_span_f1": 0.1829,
+      "val_span_macro_f1": 0.0855,
+      "val_char_iou": 0.2057,
+      "val_threshold": 0.85,
+      "lr": 0.0015,
+      "epoch_seconds": 242.0,
+      "train_seconds": 214.8
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.09122,
+      "train_windows": 7313,
+      "val_span_f1": 0.2044,
+      "val_span_macro_f1": 0.0905,
+      "val_char_iou": 0.2287,
+      "val_threshold": 0.85,
+      "lr": 0.0015,
+      "epoch_seconds": 241.7,
+      "train_seconds": 215.7
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.07638,
+      "train_windows": 7337,
+      "val_span_f1": 0.2019,
+      "val_span_macro_f1": 0.1255,
+      "val_char_iou": 0.2505,
+      "val_threshold": 0.85,
+      "lr": 0.0015,
+      "epoch_seconds": 241.4,
+      "train_seconds": 215.3
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.06679,
+      "train_windows": 7315,
+      "val_span_f1": 0.2722,
+      "val_span_macro_f1": 0.1748,
+      "val_char_iou": 0.2941,
+      "val_threshold": 0.85,
+      "lr": 0.0015,
+      "epoch_seconds": 234.8,
+      "train_seconds": 207.5
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.06163,
+      "train_windows": 7352,
+      "val_span_f1": 0.2485,
+      "val_span_macro_f1": 0.1812,
+      "val_char_iou": 0.2697,
+      "val_threshold": 0.85,
+      "lr": 0.0015,
+      "epoch_seconds": 248.1,
+      "train_seconds": 221.5
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.05573,
+      "train_windows": 7338,
+      "val_span_f1": 0.3019,
+      "val_span_macro_f1": 0.1608,
+      "val_char_iou": 0.2664,
+      "val_threshold": 0.95,
+      "lr": 0.0015,
+      "epoch_seconds": 246.5,
+      "train_seconds": 220.4
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.05057,
+      "train_windows": 7252,
+      "val_span_f1": 0.3162,
+      "val_span_macro_f1": 0.2376,
+      "val_char_iou": 0.3163,
+      "val_threshold": 0.85,
+      "lr": 0.0015,
+      "epoch_seconds": 236.1,
+      "train_seconds": 210.0
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.04564,
+      "train_windows": 7301,
+      "val_span_f1": 0.3034,
+      "val_span_macro_f1": 0.2183,
+      "val_char_iou": 0.3124,
+      "val_threshold": 0.85,
+      "lr": 0.0015,
+      "epoch_seconds": 236.3,
+      "train_seconds": 210.8
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.04367,
+      "train_windows": 7320,
+      "val_span_f1": 0.2913,
+      "val_span_macro_f1": 0.2013,
+      "val_char_iou": 0.3141,
+      "val_threshold": 0.95,
+      "lr": 0.00075,
+      "epoch_seconds": 238.6,
+      "train_seconds": 212.6
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.03561,
+      "train_windows": 7295,
+      "val_span_f1": 0.344,
+      "val_span_macro_f1": 0.2602,
+      "val_char_iou": 0.3495,
+      "val_threshold": 0.85,
+      "lr": 0.00075,
+      "epoch_seconds": 239.7,
+      "train_seconds": 213.2
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.03179,
+      "train_windows": 7356,
+      "val_span_f1": 0.36,
+      "val_span_macro_f1": 0.2302,
+      "val_char_iou": 0.314,
+      "val_threshold": 0.95,
+      "lr": 0.00075,
+      "epoch_seconds": 239.8,
+      "train_seconds": 213.9
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.02969,
+      "train_windows": 7205,
+      "val_span_f1": 0.3458,
+      "val_span_macro_f1": 0.2347,
+      "val_char_iou": 0.3286,
+      "val_threshold": 0.95,
+      "lr": 0.00075,
+      "epoch_seconds": 229.8,
+      "train_seconds": 203.9
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.02821,
+      "train_windows": 7388,
+      "val_span_f1": 0.359,
+      "val_span_macro_f1": 0.2443,
+      "val_char_iou": 0.3225,
+      "val_threshold": 0.95,
+      "lr": 0.000375,
+      "epoch_seconds": 236.3,
+      "train_seconds": 211.0
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.02472,
+      "train_windows": 7373,
+      "val_span_f1": 0.3736,
+      "val_span_macro_f1": 0.2895,
+      "val_char_iou": 0.3746,
+      "val_threshold": 0.85,
+      "lr": 0.000375,
+      "epoch_seconds": 241.0,
+      "train_seconds": 214.2
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.02387,
+      "train_windows": 7335,
+      "val_span_f1": 0.3787,
+      "val_span_macro_f1": 0.2735,
+      "val_char_iou": 0.3525,
+      "val_threshold": 0.95,
+      "lr": 0.000375,
+      "epoch_seconds": 238.7,
+      "train_seconds": 212.7
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.02223,
+      "train_windows": 7328,
+      "val_span_f1": 0.3713,
+      "val_span_macro_f1": 0.2491,
+      "val_char_iou": 0.3493,
+      "val_threshold": 0.95,
+      "lr": 0.000375,
+      "epoch_seconds": 235.1,
+      "train_seconds": 209.4
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.02188,
+      "train_windows": 7241,
+      "val_span_f1": 0.386,
+      "val_span_macro_f1": 0.2742,
+      "val_char_iou": 0.3483,
+      "val_threshold": 0.95,
+      "lr": 0.000375,
+      "epoch_seconds": 238.7,
+      "train_seconds": 212.3
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.02124,
+      "train_windows": 7341,
+      "val_span_f1": 0.3824,
+      "val_span_macro_f1": 0.2656,
+      "val_char_iou": 0.3495,
+      "val_threshold": 0.95,
+      "lr": 0.000375,
+      "epoch_seconds": 244.9,
+      "train_seconds": 218.7
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.02068,
+      "train_windows": 7348,
+      "val_span_f1": 0.3778,
+      "val_span_macro_f1": 0.2839,
+      "val_char_iou": 0.3714,
+      "val_threshold": 0.85,
+      "lr": 0.0001875,
+      "epoch_seconds": 246.0,
+      "train_seconds": 218.4
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.01894,
+      "train_windows": 7375,
+      "val_span_f1": 0.3809,
+      "val_span_macro_f1": 0.2707,
+      "val_char_iou": 0.3574,
+      "val_threshold": 0.95,
+      "lr": 0.0001875,
+      "epoch_seconds": 255.4,
+      "train_seconds": 228.7
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.01842,
+      "train_windows": 7262,
+      "val_span_f1": 0.3937,
+      "val_span_macro_f1": 0.2977,
+      "val_char_iou": 0.3801,
+      "val_threshold": 0.85,
+      "lr": 0.0001875,
+      "epoch_seconds": 243.3,
+      "train_seconds": 216.4
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.01822,
+      "train_windows": 7215,
+      "val_span_f1": 0.3877,
+      "val_span_macro_f1": 0.2788,
+      "val_char_iou": 0.3505,
+      "val_threshold": 0.95,
+      "lr": 0.0001875,
+      "epoch_seconds": 242.3,
+      "train_seconds": 215.8
+    }
+  ],
+  "best_epoch": 23,
+  "val_best_span_f1": 0.39366515837104077,
+  "val_tuned": {
+    "n_gold": 1627,
+    "n_pred": 1424,
+    "span_precision": 0.5189606741573034,
+    "span_recall": 0.45421020282728947,
+    "span_f1": 0.4844313339888561,
+    "span_macro_f1": 0.4057321945400423,
+    "exact_match_precision": 0.28019662921348315,
+    "exact_match_recall": 0.24523663183773817,
+    "exact_match_f1": 0.2615535889872173,
+    "exact_match_rate": 0.24523663183773817,
+    "mean_best_iou": 0.44831420784452986,
+    "char_iou": 0.3874431451679595,
+    "char_iou_macro": 0.3255248122392819,
+    "char_precision": 0.5826787322212991,
+    "char_recall": 0.5362470126088509,
+    "char_f1": 0.5584994909770618,
+    "categories_with_test_support": 40
+  },
+  "thresholds": {
+    "Document Name": {
+      "mode": "token",
+      "threshold": 0.85,
+      "min_tokens": 1,
+      "val_gold": 62,
+      "per_category_tuned": true,
+      "val_span_f1": 0.3357664233576642
+    },
+    "Parties": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 1,
+      "val_gold": 306,
+      "per_category_tuned": true,
+      "val_span_f1": 0.42634315424610053
+    },
+    "Agreement Date": {
+      "mode": "token",
+      "threshold": 0.98,
+      "min_tokens": 4,
+      "val_gold": 63,
+      "per_category_tuned": true,
+      "val_span_f1": 0.7037037037037037
+    },
+    "Effective Date": {
+      "mode": "token",
+      "threshold": 0.85,
+      "min_tokens": 4,
+      "val_gold": 51,
+      "per_category_tuned": true,
+      "val_span_f1": 0.4715447154471545
+    },
+    "Expiration Date": {
+      "mode": "segment",
+      "threshold": 0.8,
+      "min_tokens": 1,
+      "val_gold": 59,
+      "per_category_tuned": true,
+      "val_span_f1": 0.7321428571428573
+    },
+    "Renewal Term": {
+      "mode": "token",
+      "threshold": 0.7,
+      "min_tokens": 32,
+      "val_gold": 22,
+      "per_category_tuned": true,
+      "val_span_f1": 0.761904761904762
+    },
+    "Notice Period To Terminate Renewal": {
+      "mode": "token",
+      "threshold": 0.8,
+      "min_tokens": 32,
+      "val_gold": 14,
+      "per_category_tuned": true,
+      "val_span_f1": 0.7692307692307692
+    },
+    "Governing Law": {
+      "mode": "segment",
+      "threshold": 0.4,
+      "min_tokens": 1,
+      "val_gold": 55,
+      "per_category_tuned": true,
+      "val_span_f1": 0.9473684210526316
+    },
+    "Most Favored Nation": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 4,
+      "val_gold": 5,
+      "per_category_tuned": false,
+      "val_span_f1": 0.0
+    },
+    "Non-Compete": {
+      "mode": "segment",
+      "threshold": 0.4,
+      "min_tokens": 1,
+      "val_gold": 36,
+      "per_category_tuned": true,
+      "val_span_f1": 0.3488372093023256
+    },
+    "Exclusivity": {
+      "mode": "segment",
+      "threshold": 0.6,
+      "min_tokens": 1,
+      "val_gold": 70,
+      "per_category_tuned": true,
+      "val_span_f1": 0.3333333333333333
+    },
+    "No-Solicit Of Customers": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 4,
+      "val_gold": 3,
+      "per_category_tuned": false,
+      "val_span_f1": 0.0
+    },
+    "Competitive Restriction Exception": {
+      "mode": "token",
+      "threshold": 0.6,
+      "min_tokens": 32,
+      "val_gold": 15,
+      "per_category_tuned": true,
+      "val_span_f1": 0.14814814814814814
+    },
+    "No-Solicit Of Employees": {
+      "mode": "token",
+      "threshold": 0.55,
+      "min_tokens": 32,
+      "val_gold": 13,
+      "per_category_tuned": true,
+      "val_span_f1": 0.4761904761904762
+    },
+    "Non-Disparagement": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 4,
+      "val_gold": 3,
+      "per_category_tuned": false,
+      "val_span_f1": 0.0
+    },
+    "Termination For Convenience": {
+      "mode": "segment",
+      "threshold": 0.8,
+      "min_tokens": 1,
+      "val_gold": 28,
+      "per_category_tuned": true,
+      "val_span_f1": 0.56
+    },
+    "Rofr/Rofo/Rofn": {
+      "mode": "token",
+      "threshold": 0.99,
+      "min_tokens": 16,
+      "val_gold": 36,
+      "per_category_tuned": true,
+      "val_span_f1": 0.27272727272727276
+    },
+    "Change Of Control": {
+      "mode": "segment",
+      "threshold": 0.6,
+      "min_tokens": 1,
+      "val_gold": 13,
+      "per_category_tuned": true,
+      "val_span_f1": 0.3571428571428571
+    },
+    "Anti-Assignment": {
+      "mode": "token",
+      "threshold": 0.85,
+      "min_tokens": 16,
+      "val_gold": 72,
+      "per_category_tuned": true,
+      "val_span_f1": 0.6474820143884893
+    },
+    "Revenue/Profit Sharing": {
+      "mode": "segment",
+      "threshold": 0.85,
+      "min_tokens": 1,
+      "val_gold": 49,
+      "per_category_tuned": true,
+      "val_span_f1": 0.46376811594202894
+    },
+    "Price Restrictions": {
+      "mode": "segment",
+      "threshold": 0.15,
+      "min_tokens": 1,
+      "val_gold": 9,
+      "per_category_tuned": true,
+      "val_span_f1": 0.09090909090909093
+    },
+    "Minimum Commitment": {
+      "mode": "segment",
+      "threshold": 0.9,
+      "min_tokens": 1,
+      "val_gold": 44,
+      "per_category_tuned": true,
+      "val_span_f1": 0.2857142857142857
+    },
+    "Volume Restriction": {
+      "mode": "segment",
+      "threshold": 0.2,
+      "min_tokens": 1,
+      "val_gold": 23,
+      "per_category_tuned": true,
+      "val_span_f1": 0.10714285714285714
+    },
+    "Ip Ownership Assignment": {
+      "mode": "segment",
+      "threshold": 0.85,
+      "min_tokens": 1,
+      "val_gold": 26,
+      "per_category_tuned": true,
+      "val_span_f1": 0.33333333333333337
+    },
+    "Joint Ip Ownership": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 4,
+      "val_gold": 6,
+      "per_category_tuned": false,
+      "val_span_f1": 0.0
+    },
+    "License Grant": {
+      "mode": "segment",
+      "threshold": 0.85,
+      "min_tokens": 1,
+      "val_gold": 93,
+      "per_category_tuned": true,
+      "val_span_f1": 0.6820809248554913
+    },
+    "Non-Transferable License": {
+      "mode": "segment",
+      "threshold": 0.7,
+      "min_tokens": 1,
+      "val_gold": 39,
+      "per_category_tuned": true,
+      "val_span_f1": 0.5569620253164557
+    },
+    "Affiliate License-Licensor": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 4,
+      "val_gold": 7,
+      "per_category_tuned": false,
+      "val_span_f1": 0.0
+    },
+    "Affiliate License-Licensee": {
+      "mode": "segment",
+      "threshold": 0.85,
+      "min_tokens": 1,
+      "val_gold": 16,
+      "per_category_tuned": true,
+      "val_span_f1": 0.56
+    },
+    "Unlimited/All-You-Can-Eat-License": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 4,
+      "val_gold": 2,
+      "per_category_tuned": false,
+      "val_span_f1": 0.0
+    },
+    "Irrevocable Or Perpetual License": {
+      "mode": "segment",
+      "threshold": 0.4,
+      "min_tokens": 1,
+      "val_gold": 20,
+      "per_category_tuned": true,
+      "val_span_f1": 0.7368421052631577
+    },
+    "Source Code Escrow": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 4,
+      "val_gold": 0,
+      "per_category_tuned": false,
+      "val_span_f1": 0.0
+    },
+    "Post-Termination Services": {
+      "mode": "segment",
+      "threshold": 0.55,
+      "min_tokens": 1,
+      "val_gold": 51,
+      "per_category_tuned": true,
+      "val_span_f1": 0.3846153846153846
+    },
+    "Audit Rights": {
+      "mode": "segment",
+      "threshold": 0.9,
+      "min_tokens": 1,
+      "val_gold": 73,
+      "per_category_tuned": true,
+      "val_span_f1": 0.4878048780487805
+    },
+    "Uncapped Liability": {
+      "mode": "segment",
+      "threshold": 0.8,
+      "min_tokens": 1,
+      "val_gold": 19,
+      "per_category_tuned": true,
+      "val_span_f1": 0.5555555555555555
+    },
+    "Cap On Liability": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 16,
+      "val_gold": 86,
+      "per_category_tuned": true,
+      "val_span_f1": 0.5540540540540541
+    },
+    "Liquidated Damages": {
+      "mode": "token",
+      "threshold": 0.8,
+      "min_tokens": 16,
+      "val_gold": 16,
+      "per_category_tuned": true,
+      "val_span_f1": 0.5185185185185185
+    },
+    "Warranty Duration": {
+      "mode": "segment",
+      "threshold": 0.45,
+      "min_tokens": 1,
+      "val_gold": 36,
+      "per_category_tuned": true,
+      "val_span_f1": 0.38961038961038963
+    },
+    "Insurance": {
+      "mode": "token",
+      "threshold": 0.97,
+      "min_tokens": 8,
+      "val_gold": 60,
+      "per_category_tuned": true,
+      "val_span_f1": 0.4042553191489362
+    },
+    "Covenant Not To Sue": {
+      "mode": "segment",
+      "threshold": 0.98,
+      "min_tokens": 1,
+      "val_gold": 24,
+      "per_category_tuned": true,
+      "val_span_f1": 0.5405405405405406
+    },
+    "Third Party Beneficiary": {
+      "mode": "token",
+      "threshold": 0.9,
+      "min_tokens": 4,
+      "val_gold": 2,
+      "per_category_tuned": false,
+      "val_span_f1": 0.28571428571428575
+    }
+  },
+  "decoding": {
+    "smooth": 0,
+    "max_gap": 3,
+    "val_span_f1": 0.4844313339888561,
+    "val_span_precision": 0.5189606741573034,
+    "val_span_recall": 0.45421020282728947,
+    "segment_mode_categories": 20
+  },
+  "train_seconds": 5802.5,
+  "device": "cpu",
+  "torch_threads": 2
+}

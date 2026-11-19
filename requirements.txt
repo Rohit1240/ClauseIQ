@@ -1,0 +1,14 @@
+# Core ML / NLP (all models are trained from scratch; no pretrained weights are downloaded)
+torch>=2.2            # CPU or CUDA build; see README "CPU and NVIDIA CUDA configuration"
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.4
+matplotlib>=3.8
+
+# Backend
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9
+pydantic>=2.6
+pydantic-settings>=2.2
+pypdf>=4.0

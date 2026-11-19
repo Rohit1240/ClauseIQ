@@ -1,0 +1,28 @@
+{
+  "vocab_size": 16224,
+  "min_freq": 2,
+  "train": {
+    "contracts": 347,
+    "tokens": 3558693,
+    "unk_rate": 0.0019,
+    "segments": 108074,
+    "segments_with_label": 8268,
+    "token_positive_rate": 0.1091
+  },
+  "val": {
+    "contracts": 61,
+    "tokens": 534186,
+    "unk_rate": 0.0245,
+    "segments": 16070,
+    "segments_with_label": 1434,
+    "token_positive_rate": 0.1221
+  },
+  "test": {
+    "contracts": 102,
+    "tokens": 882360,
+    "unk_rate": 0.0224,
+    "segments": 26774,
+    "segments_with_label": 2255,
+    "token_positive_rate": 0.1165
+  }
+}

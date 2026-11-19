@@ -1,0 +1,265 @@
+{
+  "model": "tfidf_lr",
+  "config": {
+    "model": "tfidf_lr",
+    "C_grid": [
+      1.0,
+      4.0
+    ],
+    "selected_C": 4.0,
+    "max_features": 80000,
+    "ctx_features": 30000,
+    "ngram_range": [
+      1,
+      3
+    ],
+    "ctx_ngram_range": [
+      1,
+      2
+    ],
+    "class_weight": "balanced",
+    "solver": "liblinear",
+    "unit": "sentence-like segment",
+    "threshold_selection": "per-category on validation span F1"
+  },
+  "history": [
+    {
+      "C": 1.0,
+      "fit_seconds": 483.1,
+      "val_span_f1": 0.39284531301755543,
+      "val_span_macro_f1": 0.38594065167592023,
+      "val_char_iou": 0.37385849638187413,
+      "global_threshold": 0.85
+    },
+    {
+      "C": 4.0,
+      "fit_seconds": 546.4,
+      "val_span_f1": 0.40416946872898457,
+      "val_span_macro_f1": 0.39697442156290874,
+      "val_char_iou": 0.37736136787057883,
+      "global_threshold": 0.85
+    }
+  ],
+  "selected": {
+    "C": 4.0,
+    "fit_seconds": 546.4,
+    "val_span_f1": 0.40416946872898457,
+    "val_span_macro_f1": 0.39697442156290874,
+    "val_char_iou": 0.37736136787057883,
+    "global_threshold": 0.85
+  },
+  "thresholds": {
+    "global_threshold": 0.85,
+    "global_val_micro_f1": 0.3829626837542405,
+    "per_category": {
+      "Document Name": {
+        "threshold": 0.949999988079071,
+        "val_gold": 62,
+        "val_span_f1_at_threshold": 0.13913043478260873
+      },
+      "Parties": {
+        "threshold": 0.8999999761581421,
+        "val_gold": 306,
+        "val_span_f1_at_threshold": 0.08037825059101655
+      },
+      "Agreement Date": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 63,
+        "val_span_f1_at_threshold": 0.09375
+      },
+      "Effective Date": {
+        "threshold": 0.44999998807907104,
+        "val_gold": 51,
+        "val_span_f1_at_threshold": 0.16551724137931031
+      },
+      "Expiration Date": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 59,
+        "val_span_f1_at_threshold": 0.6785714285714285
+      },
+      "Renewal Term": {
+        "threshold": 0.800000011920929,
+        "val_gold": 22,
+        "val_span_f1_at_threshold": 0.761904761904762
+      },
+      "Notice Period To Terminate Renewal": {
+        "threshold": 0.800000011920929,
+        "val_gold": 14,
+        "val_span_f1_at_threshold": 0.6666666666666666
+      },
+      "Governing Law": {
+        "threshold": 0.550000011920929,
+        "val_gold": 55,
+        "val_span_f1_at_threshold": 0.9818181818181818
+      },
+      "Most Favored Nation": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 5,
+        "val_span_f1_at_threshold": 0.0
+      },
+      "Non-Compete": {
+        "threshold": 0.25,
+        "val_gold": 36,
+        "val_span_f1_at_threshold": 0.4489795918367347
+      },
+      "Exclusivity": {
+        "threshold": 0.550000011920929,
+        "val_gold": 70,
+        "val_span_f1_at_threshold": 0.49275362318840576
+      },
+      "No-Solicit Of Customers": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 3,
+        "val_span_f1_at_threshold": 0.0
+      },
+      "Competitive Restriction Exception": {
+        "threshold": 0.15000000596046448,
+        "val_gold": 15,
+        "val_span_f1_at_threshold": 0.12987012987012986
+      },
+      "No-Solicit Of Employees": {
+        "threshold": 0.3499999940395355,
+        "val_gold": 13,
+        "val_span_f1_at_threshold": 0.6
+      },
+      "Non-Disparagement": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 3,
+        "val_span_f1_at_threshold": 0.4
+      },
+      "Termination For Convenience": {
+        "threshold": 0.949999988079071,
+        "val_gold": 28,
+        "val_span_f1_at_threshold": 0.5454545454545454
+      },
+      "Rofr/Rofo/Rofn": {
+        "threshold": 0.699999988079071,
+        "val_gold": 36,
+        "val_span_f1_at_threshold": 0.36
+      },
+      "Change Of Control": {
+        "threshold": 0.550000011920929,
+        "val_gold": 13,
+        "val_span_f1_at_threshold": 0.47058823529411764
+      },
+      "Anti-Assignment": {
+        "threshold": 0.8999999761581421,
+        "val_gold": 72,
+        "val_span_f1_at_threshold": 0.6554621848739495
+      },
+      "Revenue/Profit Sharing": {
+        "threshold": 0.75,
+        "val_gold": 49,
+        "val_span_f1_at_threshold": 0.43181818181818177
+      },
+      "Price Restrictions": {
+        "threshold": 0.10000000149011612,
+        "val_gold": 9,
+        "val_span_f1_at_threshold": 0.13333333333333333
+      },
+      "Minimum Commitment": {
+        "threshold": 0.699999988079071,
+        "val_gold": 44,
+        "val_span_f1_at_threshold": 0.30630630630630634
+      },
+      "Volume Restriction": {
+        "threshold": 0.20000000298023224,
+        "val_gold": 23,
+        "val_span_f1_at_threshold": 0.25000000000000006
+      },
+      "Ip Ownership Assignment": {
+        "threshold": 0.75,
+        "val_gold": 26,
+        "val_span_f1_at_threshold": 0.39999999999999997
+      },
+      "Joint Ip Ownership": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 6,
+        "val_span_f1_at_threshold": 0.1818181818181818
+      },
+      "License Grant": {
+        "threshold": 0.8999999761581421,
+        "val_gold": 93,
+        "val_span_f1_at_threshold": 0.7169811320754716
+      },
+      "Non-Transferable License": {
+        "threshold": 0.8999999761581421,
+        "val_gold": 39,
+        "val_span_f1_at_threshold": 0.5588235294117647
+      },
+      "Affiliate License-Licensor": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 7,
+        "val_span_f1_at_threshold": 0.0
+      },
+      "Affiliate License-Licensee": {
+        "threshold": 0.44999998807907104,
+        "val_gold": 16,
+        "val_span_f1_at_threshold": 0.5882352941176471
+      },
+      "Unlimited/All-You-Can-Eat-License": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 2,
+        "val_span_f1_at_threshold": 0.0
+      },
+      "Irrevocable Or Perpetual License": {
+        "threshold": 0.6000000238418579,
+        "val_gold": 20,
+        "val_span_f1_at_threshold": 0.7027027027027027
+      },
+      "Source Code Escrow": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 0,
+        "val_span_f1_at_threshold": 0.0
+      },
+      "Post-Termination Services": {
+        "threshold": 0.699999988079071,
+        "val_gold": 51,
+        "val_span_f1_at_threshold": 0.37500000000000006
+      },
+      "Audit Rights": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 73,
+        "val_span_f1_at_threshold": 0.5
+      },
+      "Uncapped Liability": {
+        "threshold": 0.8999999761581421,
+        "val_gold": 19,
+        "val_span_f1_at_threshold": 0.5882352941176471
+      },
+      "Cap On Liability": {
+        "threshold": 0.800000011920929,
+        "val_gold": 86,
+        "val_span_f1_at_threshold": 0.608695652173913
+      },
+      "Liquidated Damages": {
+        "threshold": 0.4000000059604645,
+        "val_gold": 16,
+        "val_span_f1_at_threshold": 0.5333333333333333
+      },
+      "Warranty Duration": {
+        "threshold": 0.30000001192092896,
+        "val_gold": 36,
+        "val_span_f1_at_threshold": 0.3058823529411765
+      },
+      "Insurance": {
+        "threshold": 0.8999999761581421,
+        "val_gold": 60,
+        "val_span_f1_at_threshold": 0.42696629213483145
+      },
+      "Covenant Not To Sue": {
+        "threshold": 0.800000011920929,
+        "val_gold": 24,
+        "val_span_f1_at_threshold": 0.6
+      },
+      "Third Party Beneficiary": {
+        "threshold": 0.8500000238418579,
+        "val_gold": 2,
+        "val_span_f1_at_threshold": 0.0
+      }
+    }
+  },
+  "train_seconds": 1034.4,
+  "n_train_segments": 108074,
+  "n_features": 110021
+}

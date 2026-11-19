@@ -1,0 +1,17 @@
+services:
+  clauseiq:
+    build: .
+    image: clauseiq:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      CLAUSEIQ_DB_PATH: /app/data/app/clauseiq.sqlite3
+    volumes:
+      - clauseiq-data:/app/data/app
+    restart: unless-stopped
+
+volumes:
+  clauseiq-data:

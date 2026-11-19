@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "n_contracts": 510,
+  "n_categories": 41,
+  "n_spans": 13823,
+  "offsets_checked": 13823,
+  "offset_mismatches": 0
+}
