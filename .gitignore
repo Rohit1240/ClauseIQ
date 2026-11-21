@@ -1,24 +1,24 @@
-# Python
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.venv/
+# Python virtual environments
 venv/
-*.egg-info/
+env/
+nlp/
+Lib/
+Scripts/
+Include/
+__pycache__/
+*.pyc
 
-# Data (re-created by scripts/download_data.py + scripts/preprocess.py)
-data/raw/
-data/processed/
-data/app/
+# PyTorch and large model files
+*.dll
+*.pt
+*.pth
+*.bin
 
-# Frontend
-frontend/node_modules/
-frontend/dist/
-frontend/.env
-
-# Environment / editors
+# Environment variables
 .env
-.DS_Store
-.idea/
+
+# Node modules
+node_modules/
+
+# IDE
 .vscode/
-*.log
